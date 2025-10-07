@@ -69,7 +69,7 @@ Config = {
 
     SaveDiscordId         = true,  -- Saves Discord ID in the character/user database upon joining/leaving.
 
-    MaxCharacters         = 5,     -- Maximum number of characters a player can create. when first join, for old users go to users table and change the number of characters there
+    MaxCharacters         = 3,     -- Maximum number of characters a player can create. when first join, for old users go to users table and change the number of characters there
 
     --=============================================
     --             UI CORE SETTINGS              --
@@ -104,15 +104,15 @@ Config = {
 
     HideUi                  = false,      -- Shows or hides the overall UI.
 
-    HideGold                = false,      -- Disables the Gold UI for all players.
+    HideGold                = true,      -- Disables the Gold UI for all players.
 
-    HideMoney               = false,      -- Disables the Money UI for all players.
+    HideMoney               = true,      -- Disables the Money UI for all players.
 
-    HideLevel               = false,      -- Disables the Level UI for all players.
+    HideLevel               = true,      -- Disables the Level UI for all players.
 
-    HideID                  = false,      -- Disables the ID UI for all players.
+    HideID                  = true,      -- Disables the ID UI for all players.
 
-    HideTokens              = false,      -- Disables the Token UI for all players.
+    HideTokens              = true,      -- Disables the Token UI for all players.
 
     HidePVP                 = false,      -- Disables the PVP UI for all players.
 
@@ -120,9 +120,9 @@ Config = {
 
     UILayout                = 'Column',   -- Sets the UI layout, options are 'Row' or 'Column'.
 
-    HideWithRader           = true,       -- UI hides when the radar (minimap) is hidden.
+    HideWithRader           = false,       -- UI hides when the radar (minimap) is hidden.
 
-    OpenAfterRader          = true,       -- UI shows when the radar (minimap) reappears.
+    OpenAfterRader          = false,       -- UI shows when the radar (minimap) reappears.
 
     CloseOnDelay            = false,      -- UI automatically closes after a set time.
 
@@ -140,15 +140,15 @@ Config = {
     --            MAP CONFIGURATIONS             --
     --=============================================
 
-    mapTypeOnFoot           = 3,     -- Radar type when on foot. 0 = Off, 1 = Regular, 2 = Expanded, 3 = Simple (compass).
+    mapTypeOnFoot           = 0,     -- Radar type when on foot. 0 = Off, 1 = Regular, 2 = Expanded, 3 = Simple (compass).
 
-    mapTypeOnMount          = 3,     -- Radar type when on horse. Same options as on foot.
+    mapTypeOnMount          = 0,     -- Radar type when on horse. Same options as on foot.
 
-    enableTypeRadar         = false, -- Enables custom radar types if true, otherwise players use game settings.
+    enableTypeRadar         = true, -- Enables custom radar types if true, otherwise players use game settings.
 
-    Loadinscreen            = true,  -- Enables loading screens during spawn and respawn.
+    Loadinscreen            = false,  -- Enables loading screens during spawn and respawn.
 
-    LoadinScreenTimer       = 10000, -- Duration of loading screens in milliseconds.
+    LoadinScreenTimer       = 500, -- Duration of loading screens in milliseconds.
 
     LoadingScreenPlayerInfo = false, -- Enables showing player information on the loading screen (Player name, surname and job)
 
@@ -166,11 +166,11 @@ Config = {
 
     StaminaRecharge         = { enable = true, multiplier = 0.4 },  -- Auto-recharge for stamina, with a multiplier for speed.
 
-    RespawnTime             = 10,                                   -- Time in seconds before a player can respawn.
+    RespawnTime             = 600,                                   -- Time in seconds before a player can respawn.
 
     RespawnKey              = 0xDFF812F9,                           -- Key code for respawning (default is 'E').
 
-    RespawnKeyTime          = 5000,                                 -- Time in milliseconds to hold the respawn key.
+    RespawnKeyTime          = 3000,                                 -- Time in milliseconds to hold the respawn key.
 
     CombatLogDeath          = true,                                 -- Combat loggers respawn in a dead state instead of alive.
 

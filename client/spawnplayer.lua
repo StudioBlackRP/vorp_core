@@ -145,6 +145,7 @@ AddEventHandler('vorp:initCharacter', function(coords, heading, isdead)
         DoScreenFadeIn(4000)
         repeat Wait(500) until IsScreenFadedIn()
     end)
+    -- TriggerEvent('sin-spawnselector:open')
 end)
 
 
@@ -274,7 +275,7 @@ CreateThread(function()
             if Config.HealthRecharge.enable then
                 local NewRechargeMultiplier = GetAttributeCoreValue(PlayerPed, 0, Citizen.ResultAsInteger()) / 100 * Config.HealthRecharge.multiplier
                 local RechargeMultiplier = GetPlayerHealthRechargeMultiplier(PlayerId, Citizen.ResultAsFloat())
-                
+
                 if math.abs(NewRechargeMultiplier - RechargeMultiplier) > 0.01 then
                     SetPlayerHealthRechargeMultiplier(PlayerId, NewRechargeMultiplier)
                 end
