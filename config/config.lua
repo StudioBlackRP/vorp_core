@@ -6,95 +6,95 @@ Lang = "English"
 Config = Config or {}
 
 Config = {
-    autoUpdateDB          = true,  -- Enables automatic database updates.
+    autoUpdateDB          = true, -- Enables automatic database updates.
 
-    ReportCrashes         = true,  -- Reports crashes to https://monitor.gtp-dev.com login in here to create your API KEY , by doing this you will help the community to improve the server stability and fix crashes faster
+    ReportCrashes         = true, -- Reports crashes to https://monitor.gtp-dev.com login in here to create your API KEY , by doing this you will help the community to improve the server stability and fix crashes faster
 
-    API_KEY               = "",    -- API key for crash reporting. Get your API key at https://monitor.gtp-dev.com to allow more requests make a donation in the website
+    API_KEY               = "",   -- API key for crash reporting. Get your API key at https://monitor.gtp-dev.com to allow more requests make a donation in the website
 
     -- (IF YOU HAVE WHITELIST ENABLED DONT ENABLE THIS)--
-    DeleteFromUsersTable  = true,  -- this will delete from users table if character does not exist "optimising the queries"
+    DeleteFromUsersTable  = true, -- this will delete from users table if character does not exist "optimising the queries"
     -----------------------------------------------------
 
-    CanRespawn            = function()  -- use this function to add your own logic if player can respawn or not
+    CanRespawn            = function() -- use this function to add your own logic if player can respawn or not
         -- add your logic here
-        return true                     -- dont touch
+        return true                    -- dont touch
     end,
     --=============================================
     --        STARTING CONFIGURATION             --
     --=============================================
 
-    initGold              = 0.0,           -- Initial gold amount for new players.
+    initGold              = 0.0,          -- Initial gold amount for new players.
 
-    initMoney             = 200.0,         -- Initial money amount for new players.
+    initMoney             = 200.0,        -- Initial money amount for new players.
 
-    initRol               = 0.0,           -- Initial role-play currency amount for new players.
+    initRol               = 0.0,          -- Initial role-play currency amount for new players.
 
-    initInvCapacity       = 35.0,          -- Initial number of character inventory weight for new players. for old characters you must change in the database if you dont ave a new server
+    initInvCapacity       = 35.0,         -- Initial number of character inventory weight for new players. for old characters you must change in the database if you dont ave a new server
 
-    initXp                = 0,             -- Initial experience points for new players.
+    initXp                = 0,            -- Initial experience points for new players.
 
-    initJob               = "unemployed",  -- Default job for new players. Recommended not to change.
+    initJob               = "unemployed", -- Default job for new players. Recommended not to change.
 
-    initJobGrade          = 0,             -- Default job grade for new players. Recommended not to change.
+    initJobGrade          = 0,            -- Default job grade for new players. Recommended not to change.
 
-    initGroup             = "user",        -- Default user group for new players. Recommended not to change.
+    initGroup             = "user",       -- Default user group for new players. Recommended not to change.
 
-    initJobLabel          = "Unemployed",  -- Default job label for new players. Recommended not to change.
+    initJobLabel          = "Unemployed", -- Default job label for new players. Recommended not to change.
 
-    Whitelist             = false,         -- Enable if not using TxAdmin's whitelist system.
+    Whitelist             = false,        -- Enable if not using TxAdmin's whitelist system.
 
-    SavePlayersStatus     = false,         -- Future deprecated. Advised not to use, as it will be removed.
+    SavePlayersStatus     = false,        -- Future deprecated. Advised not to use, as it will be removed.
 
-    maxHealth             = 10,            -- Maximum health for players. 10 is full, 0 is empty.
+    maxHealth             = 10,           -- Maximum health for players. 10 is full, 0 is empty.
 
-    maxStamina            = 10,            -- Maximum stamina for players. 10 is full, 0 is empty.
+    maxStamina            = 10,           -- Maximum stamina for players. 10 is full, 0 is empty.
 
-    PVP                   = true,          -- Enables player vs player combat.
+    PVP                   = true,         -- Enables player vs player combat.
 
-    PVPToggle             = false,         -- Allows players to toggle their PVP status.
+    PVPToggle             = false,        -- Allows players to toggle their PVP status.
 
-    CommandOnOffPVP       = 'pvp',         -- Command to toggle PVP status, requires PVPToggle to be true.
+    CommandOnOffPVP       = 'pvp',        -- Command to toggle PVP status, requires PVPToggle to be true.
 
-    savePlayersTimer      = 10,            -- Interval in minutes for automatically saving all players to the database.
+    savePlayersTimer      = 10,           -- Interval in minutes for automatically saving all players to the database.
 
-    showplayerIDwhenfocus = true,          -- Shows player Steam name when focusing on them with RMB if set to false.
+    showplayerIDwhenfocus = true,         -- Shows player Steam name when focusing on them with RMB if set to false.
 
-    disableAutoAIM        = true,          -- Disables auto-aim for controller players if set to false.
+    disableAutoAIM        = true,         -- Disables auto-aim for controller players if set to false.
 
-    DisableCinematicMode  = false,         -- Set false to disable cineamtic mode/camera (While holding "V" key) (You should be aware that disabling cinematic mode may break functionality in scripts that use it.)
+    DisableCinematicMode  = false,        -- Set false to disable cineamtic mode/camera (While holding "V" key) (You should be aware that disabling cinematic mode may break functionality in scripts that use it.)
     --=============================================
     --          MULTICHARACTER SUPPORT           --
     --=============================================
 
-    SaveDiscordId         = true,  -- Saves Discord ID in the character/user database upon joining/leaving.
+    SaveDiscordId         = true, -- Saves Discord ID in the character/user database upon joining/leaving.
 
-    MaxCharacters         = 3,     -- Maximum number of characters a player can create. when first join, for old users go to users table and change the number of characters there
+    MaxCharacters         = 3,    -- Maximum number of characters a player can create. when first join, for old users go to users table and change the number of characters there
 
     --=============================================
     --             UI CORE SETTINGS              --
     --=============================================
 
-    HideOnlyDEADEYE       = true,   -- Hides only the Dead Eye core in the UI.
+    HideOnlyDEADEYE       = true,  -- Hides only the Dead Eye core in the UI.
 
-    HidePlayersCore       = false,  -- Hides player cores in the UI.
+    HidePlayersCore       = false, -- Hides player cores in the UI.
 
-    HideHorseCores        = false,  -- Hides horse cores in the UI.
+    HideHorseCores        = false, -- Hides horse cores in the UI.
 
     --=============================================
     --          WEBHOOK CONFIGURATIONS           --
     --     Refer to commands.config for usage.   --
     --=============================================
 
-    webhookColor          = 16711680,                             -- Color for embeds in Discord webhooks.
+    webhookColor          = 16711680,                            -- Color for embeds in Discord webhooks.
 
-    name                  = "VORP",                               -- Name displayed in webhook embeds.
+    name                  = "VORP",                              -- Name displayed in webhook embeds.
 
-    logo                  = "https://via.placeholder.com/30x30",  -- Logo URL for webhook embeds.
+    logo                  = "https://via.placeholder.com/30x30", -- Logo URL for webhook embeds.
 
-    footerLogo            = "https://via.placeholder.com/30x30",  -- Footer logo URL for webhook embeds.
+    footerLogo            = "https://via.placeholder.com/30x30", -- Footer logo URL for webhook embeds.
 
-    Avatar                = "https://via.placeholder.com/30x30",  -- Avatar URL for webhook embeds.
+    Avatar                = "https://via.placeholder.com/30x30", -- Avatar URL for webhook embeds.
 
 
     --=============================================
@@ -104,15 +104,15 @@ Config = {
 
     HideUi                  = false,      -- Shows or hides the overall UI.
 
-    HideGold                = true,      -- Disables the Gold UI for all players.
+    HideGold                = true,       -- Disables the Gold UI for all players.
 
-    HideMoney               = true,      -- Disables the Money UI for all players.
+    HideMoney               = true,       -- Disables the Money UI for all players.
 
-    HideLevel               = true,      -- Disables the Level UI for all players.
+    HideLevel               = true,       -- Disables the Level UI for all players.
 
-    HideID                  = true,      -- Disables the ID UI for all players.
+    HideID                  = true,       -- Disables the ID UI for all players.
 
-    HideTokens              = true,      -- Disables the Token UI for all players.
+    HideTokens              = true,       -- Disables the Token UI for all players.
 
     HidePVP                 = false,      -- Disables the PVP UI for all players.
 
@@ -120,9 +120,9 @@ Config = {
 
     UILayout                = 'Column',   -- Sets the UI layout, options are 'Row' or 'Column'.
 
-    HideWithRader           = false,       -- UI hides when the radar (minimap) is hidden.
+    HideWithRader           = false,      -- UI hides when the radar (minimap) is hidden.
 
-    OpenAfterRader          = false,       -- UI shows when the radar (minimap) reappears.
+    OpenAfterRader          = false,      -- UI shows when the radar (minimap) reappears.
 
     CloseOnDelay            = false,      -- UI automatically closes after a set time.
 
@@ -140,15 +140,15 @@ Config = {
     --            MAP CONFIGURATIONS             --
     --=============================================
 
-    mapTypeOnFoot           = 0,     -- Radar type when on foot. 0 = Off, 1 = Regular, 2 = Expanded, 3 = Simple (compass).
+    mapTypeOnFoot           = 3,     -- Radar type when on foot. 0 = Off, 1 = Regular, 2 = Expanded, 3 = Simple (compass).
 
-    mapTypeOnMount          = 0,     -- Radar type when on horse. Same options as on foot.
+    mapTypeOnMount          = 3,     -- Radar type when on horse. Same options as on foot.
 
-    enableTypeRadar         = true, -- Enables custom radar types if true, otherwise players use game settings.
+    enableTypeRadar         = true,  -- Enables custom radar types if true, otherwise players use game settings.
 
-    Loadinscreen            = false,  -- Enables loading screens during spawn and respawn.
+    Loadinscreen            = false, -- Enables loading screens during spawn and respawn.
 
-    LoadinScreenTimer       = 500, -- Duration of loading screens in milliseconds.
+    LoadinScreenTimer       = 500,   -- Duration of loading screens in milliseconds.
 
     LoadingScreenPlayerInfo = false, -- Enables showing player information on the loading screen (Player name, surname and job)
 
@@ -166,7 +166,7 @@ Config = {
 
     StaminaRecharge         = { enable = true, multiplier = 0.4 },  -- Auto-recharge for stamina, with a multiplier for speed.
 
-    RespawnTime             = 600,                                   -- Time in seconds before a player can respawn.
+    RespawnTime             = 600,                                  -- Time in seconds before a player can respawn.
 
     RespawnKey              = 0xDFF812F9,                           -- Key code for respawning (default is 'E').
 
